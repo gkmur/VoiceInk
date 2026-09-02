@@ -102,3 +102,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .deps/
+build.log
+.local-build/
