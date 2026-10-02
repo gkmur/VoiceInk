@@ -91,6 +91,7 @@ local: check setup
 		rm -rf "$$HOME/Downloads/VoiceInk.app"; \
 		ditto "$$APP_PATH" "$$HOME/Downloads/VoiceInk.app"; \
 		xattr -cr "$$HOME/Downloads/VoiceInk.app"; \
+		LOCAL_CODESIGN_IDENTITY="$(LOCAL_CODESIGN_IDENTITY)" ./scripts/sign-local-build.sh "$$HOME/Downloads/VoiceInk.app"; \
 		echo ""; \
 		echo "Build complete! App saved to: ~/Downloads/VoiceInk.app"; \
 		echo "Run with: open ~/Downloads/VoiceInk.app"; \
